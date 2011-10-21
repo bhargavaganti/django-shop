@@ -23,6 +23,7 @@ ADDRESS_TEMPLATE = getattr(settings, 'SHOP_ADDRESS_TEMPLATE',
 
 class Country(models.Model):
     name = models.CharField(max_length=255)
+    iso_3166 = models.IntegerField(max_length=3)
 
     def __unicode__(self):
         return u'%s' % self.name
